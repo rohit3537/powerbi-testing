@@ -1,0 +1,72 @@
+# DAX Measure Test Suite — Template
+# Copy this file and customize for your project.
+#
+# Run with:
+#   uvx --python 3.12 --with pyadomd --with pyyaml python -m dax_test.runner tests/my_tests.yaml
+
+project: My Project Name
+# Optional: path to .SemanticModel folder (for auto-discovery)
+# model_path: "./ProjectFolder/MyReport.SemanticModel"
+
+defaults:
+  tolerance: 0.01        # absolute tolerance for numeric comparisons
+  # tolerance_pct: 0.001 # relative tolerance (0.1%)
+
+tests:
+  # --- Compare two measures (new vs old) ---
+  # - name: "New measure matches old measure"
+  #   type: measure_vs_measure
+  #   measure_a: "'Table'[New Measure]"
+  #   measure_b: "SUM('Table'[Old Column])"
+  #   tags: [migration, critical]
+
+  # --- Check a measure returns a specific value under filters ---
+  # - name: "Revenue for East in 2025"
+  #   type: expected_value
+  #   measure: "[Total Revenue]"
+  #   expected: 500000
+  #   tolerance: 100
+  #   filters:
+  #     "'Region'[Region]": "East"
+  #     "'DateTable'[Year]": 2025
+  #   tags: [revenue, regression]
+
+  # --- Sanity: measure is not blank ---
+  # - name: "Total Revenue is not blank"
+  #   type: not_blank
+  #   measure: "[Total Revenue]"
+  #   tags: [sanity, smoke]
+
+  # --- Sanity: measure returns a number ---
+  # - name: "Margin % is numeric"
+  #   type: is_numeric
+  #   measure: "[Margin %]"
+  #   tags: [sanity]
+
+  # --- Sanity: value within range ---
+  # - name: "Margin % between 0 and 1"
+  #   type: in_range
+  #   measure: "[Margin %]"
+  #   min: 0
+  #   max: 1
+  #   tags: [sanity]
+
+  # --- Test under multiple filter contexts ---
+  # - name: "Revenue under various filters"
+  #   type: filter_matrix
+  #   measure: "[Total Revenue]"
+  #   contexts:
+  #     - label: "No filter (grand total)"
+  #       filters: {}
+  #       check: not_blank
+  #     - label: "Single region"
+  #       filters:
+  #         "'Region'[Region]": "East"
+  #       check: not_blank
+  #     - label: "Specific expected value"
+  #       filters:
+  #         "'Region'[Region]": "West"
+  #       check: expected_value
+  #       expected: 250000
+  #       tolerance: 500
+  #   tags: [filter-context]

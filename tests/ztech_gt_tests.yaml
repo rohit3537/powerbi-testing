@@ -1,0 +1,82 @@
+# Ground Truth Validation Tests — Ztech Sales Performance Dashboard
+# These tests independently compute expected values using Python/pandas
+# on raw data from the PBI model and compare against DAX measure results.
+
+project: Ztech Ground Truth Validation
+model_path: "./Ztech/Sales Performance Dashboard - Net Invoice v6.SemanticModel"
+
+defaults:
+  tolerance: 1.0
+
+tests:
+  # --- RS_ Rolling Quarter Measures ---
+
+  - name: "RS_Rolling Qtr Rev (grand total) matches raw SUM"
+    type: ground_truth
+    measure: "'EOD Data (LV)'[RS_Rolling Qtr Rev]"
+    tags: [ground-truth, rs-measures, critical]
+    validation:
+      source_table: "EOD Data (LV)"
+      column: "net revenue"
+      aggregation: SUM
+      date_column: "Date"
+      date_range:
+        type: rolling_quarter
+
+  - name: "RS_Rolling Qtr -1 Rev (grand total) matches raw SUM"
+    type: ground_truth
+    measure: "'EOD Data (LV)'[RS_Rolling Qtr -1 Rev]"
+    tags: [ground-truth, rs-measures, critical]
+    validation:
+      source_table: "EOD Data (LV)"
+      column: "net revenue"
+      aggregation: SUM
+      date_column: "Date"
+      date_range:
+        type: rolling_quarter_minus_1
+
+  # --- Per-Hospital Validation ---
+  # Tests with a specific hospital filter to verify per-account context
+
+  - name: "RS_Rolling Qtr Rev for a specific hospital"
+    type: ground_truth
+    measure: "'EOD Data (LV)'[RS_Rolling Qtr Rev]"
+    tags: [ground-truth, rs-measures, per-account]
+    validation:
+      source_table: "EOD Data (LV)"
+      column: "net revenue"
+      aggregation: SUM
+      date_column: "Date"
+      date_range:
+        type: rolling_quarter
+      filters:
+        Hospital: "Kaiser Los Angeles Medical Center"
+
+  # --- Order Frequency Measures ---
+
+  - name: "RS_Rolling Qtr Days between Orders (order count check)"
+    type: ground_truth
+    measure: "CALCULATE(DISTINCTCOUNT('EOD Data (LV)'[Date]), FILTER(ALL(DateTable[Date]), DateTable[Date] >= [RS_Rolling Qtr Start] && DateTable[Date] <= [RS_Reporting Through]))"
+    tags: [ground-truth, rs-measures, frequency]
+    validation:
+      source_table: "EOD Data (LV)"
+      column: "Date"
+      aggregation: DISTINCTCOUNT
+      date_column: "Date"
+      date_range:
+        type: rolling_quarter
+      filters:
+        Hospital: "Kaiser Los Angeles Medical Center"
+
+  # --- Basic Revenue Validation ---
+
+  - name: "Total net revenue matches raw SUM (no date filter)"
+    type: ground_truth
+    measure: "SUM('EOD Data (LV)'[net revenue])"
+    tags: [ground-truth, revenue, smoke]
+    validation:
+      source_table: "EOD Data (LV)"
+      column: "net revenue"
+      aggregation: SUM
+      date_range:
+        type: all

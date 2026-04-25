@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Power BI binary files
+*.pbix
+*.pbit
+*.abf
+**/.pbi/cache.abf
+
+# Workbooks (PBIP projects - managed separately, multi-GB)
+Workbooks/
+workbooks/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Claude Code
+.claude/

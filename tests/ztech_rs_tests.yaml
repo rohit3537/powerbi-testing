@@ -1,0 +1,113 @@
+# Ztech Sales Performance Dashboard — RS_ Measure Tests
+# Tests the new dynamic rolling quarter measures against the old column-based logic.
+#
+# Run:
+#   uvx --python 3.12 --with pyadomd --with pyyaml python -m dax_test.runner tests/ztech_rs_tests.yaml -v
+
+project: Ztech RS Measures
+model_path: "./Ztech/Sales Performance Dashboard - Net Invoice v6.SemanticModel"
+
+defaults:
+  tolerance: 1.0   # $1 tolerance for revenue comparisons
+
+tests:
+  # ========================================
+  # Smoke tests — measures should not be blank
+  # ========================================
+  - name: "RS_Reporting Through is not blank"
+    type: not_blank
+    measure: "'EOD Data (LV)'[RS_Reporting Through]"
+    tags: [smoke, rs-measures]
+
+  - name: "RS_Current Qtr Start is not blank"
+    type: not_blank
+    measure: "'EOD Data (LV)'[RS_Current Qtr Start]"
+    tags: [smoke, rs-measures]
+
+  - name: "RS_Current Qtr End is not blank"
+    type: not_blank
+    measure: "'EOD Data (LV)'[RS_Current Qtr End]"
+    tags: [smoke, rs-measures]
+
+  - name: "RS_Qtr Workdays is not blank"
+    type: not_blank
+    measure: "'EOD Data (LV)'[RS_Qtr Workdays]"
+    tags: [smoke, rs-measures]
+
+  - name: "RS_Rolling Qtr Start is not blank"
+    type: not_blank
+    measure: "'EOD Data (LV)'[RS_Rolling Qtr Start]"
+    tags: [smoke, rs-measures]
+
+  - name: "RS_Rolling Qtr -1 Start is not blank"
+    type: not_blank
+    measure: "'EOD Data (LV)'[RS_Rolling Qtr -1 Start]"
+    tags: [smoke, rs-measures]
+
+  - name: "RS_Rolling Qtr Rev is not blank"
+    type: not_blank
+    measure: "'EOD Data (LV)'[RS_Rolling Qtr Rev]"
+    tags: [smoke, rs-measures]
+
+  - name: "RS_Rolling Qtr -1 Rev is not blank"
+    type: not_blank
+    measure: "'EOD Data (LV)'[RS_Rolling Qtr -1 Rev]"
+    tags: [smoke, rs-measures]
+
+  # ========================================
+  # Numeric type checks
+  # ========================================
+  - name: "RS_Qtr Workdays is numeric"
+    type: is_numeric
+    measure: "'EOD Data (LV)'[RS_Qtr Workdays]"
+    tags: [sanity, rs-measures]
+
+  - name: "RS_Rolling Qtr Rev is numeric"
+    type: is_numeric
+    measure: "'EOD Data (LV)'[RS_Rolling Qtr Rev]"
+    tags: [sanity, rs-measures]
+
+  - name: "RS_Rolling Qtr -1 Rev is numeric"
+    type: is_numeric
+    measure: "'EOD Data (LV)'[RS_Rolling Qtr -1 Rev]"
+    tags: [sanity, rs-measures]
+
+  # ========================================
+  # Range checks
+  # ========================================
+  - name: "RS_Qtr Workdays is reasonable (50-70)"
+    type: in_range
+    measure: "'EOD Data (LV)'[RS_Qtr Workdays]"
+    min: 50
+    max: 70
+    tags: [sanity, rs-measures]
+
+  # ========================================
+  # Cross-validation: RS_ measures vs old column-based logic
+  # These should match under default (no filter) context
+  # ========================================
+  - name: "RS_Reporting Through matches old column"
+    type: measure_vs_measure
+    measure_a: "'EOD Data (LV)'[RS_Reporting Through]"
+    measure_b: "MAX('EOD Data (LV)'[Reporting Through Column])"
+    tolerance: 0
+    tags: [cross-validation, rs-measures, critical]
+
+  - name: "RS_Rolling Qtr Rev matches old column sum"
+    type: measure_vs_measure
+    measure_a: "'EOD Data (LV)'[RS_Rolling Qtr Rev]"
+    measure_b: "SUM('EOD Data (LV)'[Rolling Qtr Rev])"
+    tags: [cross-validation, rs-measures, critical]
+
+  - name: "RS_Rolling Qtr -1 Rev matches old column sum"
+    type: measure_vs_measure
+    measure_a: "'EOD Data (LV)'[RS_Rolling Qtr -1 Rev]"
+    measure_b: "SUM('EOD Data (LV)'[Rolling Qtr -1 Rev])"
+    tags: [cross-validation, rs-measures, critical]
+
+  - name: "RS_Rolling Qtr Variance equals Rev minus -1 Rev"
+    type: measure_vs_measure
+    measure_a: "'EOD Data (LV)'[RS_Rolling Qtr Variance]"
+    measure_b: "'EOD Data (LV)'[RS_Rolling Qtr Rev] - 'EOD Data (LV)'[RS_Rolling Qtr -1 Rev]"
+    tolerance: 0.01
+    tags: [consistency, rs-measures]

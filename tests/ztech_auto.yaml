@@ -1,0 +1,1649 @@
+# Auto-generated sanity tests
+# Source: ./Ztech/Sales Performance Dashboard - Net Invoice v6.SemanticModel
+# Measures found: 156 visible, 44 hidden
+# Review and customize before running in production.
+
+project: Auto-Generated Sanity Tests
+model_path: ./Ztech/Sales Performance Dashboard - Net Invoice v6.SemanticModel
+defaults:
+  tolerance: 0.01
+tests:
+- name: ADS is not blank
+  type: not_blank
+  measure: '''Account Alignment''[ADS]'
+  tags:
+  - sanity
+  - auto-generated
+  - account-alignment
+- name: Daily Sales to Hit Goal is not blank
+  type: not_blank
+  measure: '''Account Alignment''[Daily Sales to Hit Goal]'
+  tags:
+  - sanity
+  - auto-generated
+  - account-alignment
+- name: Daily Sales to Hit Goal returns a number
+  type: is_numeric
+  measure: '''Account Alignment''[Daily Sales to Hit Goal]'
+  tags:
+  - sanity
+  - auto-generated
+  - account-alignment
+- name: Net Revenue Run Rate is not blank
+  type: not_blank
+  measure: '''Account Alignment''[Net Revenue Run Rate]'
+  tags:
+  - sanity
+  - auto-generated
+  - account-alignment
+- name: Net Revenue Run Rate returns a number
+  type: is_numeric
+  measure: '''Account Alignment''[Net Revenue Run Rate]'
+  tags:
+  - sanity
+  - auto-generated
+  - account-alignment
+- name: PVQ PTQ is not blank
+  type: not_blank
+  measure: '''Account Alignment''[PVQ PTQ]'
+  tags:
+  - sanity
+  - auto-generated
+  - account-alignment
+- name: Performance to Quota is not blank
+  type: not_blank
+  measure: '''Account Alignment''[Performance to Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - account-alignment
+- name: Performance to Quota returns a number
+  type: is_numeric
+  measure: '''Account Alignment''[Performance to Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - account-alignment
+- name: Performance to Quota is a valid percentage
+  type: in_range
+  measure: '''Account Alignment''[Performance to Quota]'
+  min: 0
+  max: 10
+  tags:
+  - sanity
+  - auto-generated
+  - percentage
+  - account-alignment
+- name: Performance to Quota v2 is not blank
+  type: not_blank
+  measure: '''Account Alignment''[Performance to Quota v2]'
+  tags:
+  - sanity
+  - auto-generated
+  - account-alignment
+- name: Progress to Quota is not blank
+  type: not_blank
+  measure: '''Account Alignment''[Progress to Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - account-alignment
+- name: Remaining Quota is not blank
+  type: not_blank
+  measure: '''Account Alignment''[Remaining Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - account-alignment
+- name: Rep at or above Quota is not blank
+  type: not_blank
+  measure: '''Account Alignment''[Rep at or above Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - account-alignment
+- name: Rep at or above Quota returns a number
+  type: is_numeric
+  measure: '''Account Alignment''[Rep at or above Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - account-alignment
+- name: Run Rate % to Quota is not blank
+  type: not_blank
+  measure: '''Account Alignment''[Run Rate % to Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - account-alignment
+- name: Run Rate vs Quota is not blank
+  type: not_blank
+  measure: '''Account Alignment''[Run Rate vs Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - account-alignment
+- name: Selected date is not blank
+  type: not_blank
+  measure: '''Date(Filter)''[Selected date]'
+  tags:
+  - sanity
+  - auto-generated
+  - date-filter
+- name: '% Elapsed is not blank'
+  type: not_blank
+  measure: '''DateTable''[% Elapsed]'
+  tags:
+  - sanity
+  - auto-generated
+  - datetable
+- name: '% Elapsed returns a number'
+  type: is_numeric
+  measure: '''DateTable''[% Elapsed]'
+  tags:
+  - sanity
+  - auto-generated
+  - datetable
+- name: '% Elapsed is a valid percentage'
+  type: in_range
+  measure: '''DateTable''[% Elapsed]'
+  min: 0
+  max: 10
+  tags:
+  - sanity
+  - auto-generated
+  - percentage
+  - datetable
+- name: AvgRevPerAccountPerMonth is not blank
+  type: not_blank
+  measure: '''DateTable''[AvgRevPerAccountPerMonth]'
+  tags:
+  - sanity
+  - auto-generated
+  - datetable
+- name: AvgRevPerAccountPerMonth returns a number
+  type: is_numeric
+  measure: '''DateTable''[AvgRevPerAccountPerMonth]'
+  tags:
+  - sanity
+  - auto-generated
+  - datetable
+- name: CurrentQtrDisplay is not blank
+  type: not_blank
+  measure: '''DateTable''[CurrentQtrDisplay]'
+  tags:
+  - sanity
+  - auto-generated
+  - datetable
+- name: List of Current_Qtr Start values is not blank
+  type: not_blank
+  measure: '''DateTable''[List of Current_Qtr Start values]'
+  tags:
+  - sanity
+  - auto-generated
+  - datetable
+- name: List of Current_Qtr Start values 2 is not blank
+  type: not_blank
+  measure: '''DateTable''[List of Current_Qtr Start values 2]'
+  tags:
+  - sanity
+  - auto-generated
+  - datetable
+- name: Reporting Through is not blank
+  type: not_blank
+  measure: '''DateTable''[Reporting Through]'
+  tags:
+  - sanity
+  - auto-generated
+  - datetable
+- name: Rolling Qtr -1 Start M is not blank
+  type: not_blank
+  measure: '''DateTable''[Rolling Qtr -1 Start M]'
+  tags:
+  - sanity
+  - auto-generated
+  - datetable
+- name: Rolling Qtr Start M is not blank
+  type: not_blank
+  measure: '''DateTable''[Rolling Qtr Start M]'
+  tags:
+  - sanity
+  - auto-generated
+  - datetable
+- name: Sum of Revenue total for Region is not blank
+  type: not_blank
+  measure: '''DateTable''[Sum of Revenue total for Region]'
+  tags:
+  - sanity
+  - auto-generated
+  - datetable
+- name: Sum of Revenue total for Region returns a number
+  type: is_numeric
+  measure: '''DateTable''[Sum of Revenue total for Region]'
+  tags:
+  - sanity
+  - auto-generated
+  - datetable
+- name: Fortress is not blank
+  type: not_blank
+  measure: '''Designation Site Count Table''[Fortress]'
+  tags:
+  - sanity
+  - auto-generated
+  - designation-site-count-table
+- name: Fortress returns a number
+  type: is_numeric
+  measure: '''Designation Site Count Table''[Fortress]'
+  tags:
+  - sanity
+  - auto-generated
+  - designation-site-count-table
+- name: Gap to F Goal is not blank
+  type: not_blank
+  measure: '''Designation Site Count Table''[Gap to F Goal]'
+  tags:
+  - sanity
+  - auto-generated
+  - designation-site-count-table
+- name: Gap to F Goal returns a number
+  type: is_numeric
+  measure: '''Designation Site Count Table''[Gap to F Goal]'
+  tags:
+  - sanity
+  - auto-generated
+  - designation-site-count-table
+- name: Gap to RA Goal is not blank
+  type: not_blank
+  measure: '''Designation Site Count Table''[Gap to RA Goal]'
+  tags:
+  - sanity
+  - auto-generated
+  - designation-site-count-table
+- name: Gap to RA Goal returns a number
+  type: is_numeric
+  measure: '''Designation Site Count Table''[Gap to RA Goal]'
+  tags:
+  - sanity
+  - auto-generated
+  - designation-site-count-table
+- name: Gap to T Goal is not blank
+  type: not_blank
+  measure: '''Designation Site Count Table''[Gap to T Goal]'
+  tags:
+  - sanity
+  - auto-generated
+  - designation-site-count-table
+- name: Gap to T Goal returns a number
+  type: is_numeric
+  measure: '''Designation Site Count Table''[Gap to T Goal]'
+  tags:
+  - sanity
+  - auto-generated
+  - designation-site-count-table
+- name: Recent Adopters is not blank
+  type: not_blank
+  measure: '''Designation Site Count Table''[Recent Adopters]'
+  tags:
+  - sanity
+  - auto-generated
+  - designation-site-count-table
+- name: Recent Adopters returns a number
+  type: is_numeric
+  measure: '''Designation Site Count Table''[Recent Adopters]'
+  tags:
+  - sanity
+  - auto-generated
+  - designation-site-count-table
+- name: '% Ordering Accounts is not blank'
+  type: not_blank
+  measure: '''EOD Data''[% Ordering Accounts]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: '% Ordering Accounts Qtr is not blank'
+  type: not_blank
+  measure: '''EOD Data''[% Ordering Accounts Qtr]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: '% to Quota ATM is not blank'
+  type: not_blank
+  measure: '''EOD Data''[% to Quota ATM]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: 4 Qtr Growth is not blank
+  type: not_blank
+  measure: '''EOD Data''[4 Qtr Growth]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: ATM Daily Sales to Hit Goal is not blank
+  type: not_blank
+  measure: '''EOD Data''[ATM Daily Sales to Hit Goal]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: ATM Run Rate % to Quota is not blank
+  type: not_blank
+  measure: '''EOD Data''[ATM Run Rate % to Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: ATM Run Rate v Quota is not blank
+  type: not_blank
+  measure: '''EOD Data''[ATM Run Rate v Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Acuity 90 Day Rev is not blank
+  type: not_blank
+  measure: '''EOD Data''[Acuity 90 Day Rev]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Acuity 90 Day Rev returns a number
+  type: is_numeric
+  measure: '''EOD Data''[Acuity 90 Day Rev]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Acuity Pace is not blank
+  type: not_blank
+  measure: '''EOD Data''[Acuity Pace]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Acuity Remaining Workdays is not blank
+  type: not_blank
+  measure: '''EOD Data''[Acuity Remaining Workdays]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Acuity Remaining Workdays returns a number
+  type: is_numeric
+  measure: '''EOD Data''[Acuity Remaining Workdays]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Acuity Workdays last 90 days is not blank
+  type: not_blank
+  measure: '''EOD Data''[Acuity Workdays last 90 days]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Acuity Workdays last 90 days returns a number
+  type: is_numeric
+  measure: '''EOD Data''[Acuity Workdays last 90 days]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Annual Goal is not blank
+  type: not_blank
+  measure: '''EOD Data''[Annual Goal]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Annual Goal returns a number
+  type: is_numeric
+  measure: '''EOD Data''[Annual Goal]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Annualized Sales is not blank
+  type: not_blank
+  measure: '''EOD Data''[Annualized Sales]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Average of Revenue divided by Count of Internal ID is not blank
+  type: not_blank
+  measure: '''EOD Data''[Average of Revenue divided by Count of Internal ID]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Average of Revenue divided by Count of Internal ID returns a number
+  type: is_numeric
+  measure: '''EOD Data''[Average of Revenue divided by Count of Internal ID]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Avg ASP Line is not blank
+  type: not_blank
+  measure: '''EOD Data''[Avg ASP Line]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: CohortMonth is not blank
+  type: not_blank
+  measure: '''EOD Data''[CohortMonth]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Count of Internal ID running total in Qutr Year is not blank
+  type: not_blank
+  measure: '''EOD Data''[Count of Internal ID running total in Qutr Year]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Count of Internal ID running total in Qutr Year returns a number
+  type: is_numeric
+  measure: '''EOD Data''[Count of Internal ID running total in Qutr Year]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Daily Sales - Daily Quota is not blank
+  type: not_blank
+  measure: '''EOD Data''[Daily Sales - Daily Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: EOD Total Hospitals is not blank
+  type: not_blank
+  measure: '''EOD Data''[EOD Total Hospitals]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: EOD Total Hospitals returns a number
+  type: is_numeric
+  measure: '''EOD Data''[EOD Total Hospitals]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: EOD Total Hospitals 2 is not blank
+  type: not_blank
+  measure: '''EOD Data''[EOD Total Hospitals 2]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: EOD Total Hospitals 2 returns a number
+  type: is_numeric
+  measure: '''EOD Data''[EOD Total Hospitals 2]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: H2 HP ASP Goal is not blank
+  type: not_blank
+  measure: '''EOD Data''[H2 HP ASP Goal]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: HP Access Rev is not blank
+  type: not_blank
+  measure: '''EOD Data''[HP Access Rev]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: HP Access Rev returns a number
+  type: is_numeric
+  measure: '''EOD Data''[HP Access Rev]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: HP Reperfusion Rev is not blank
+  type: not_blank
+  measure: '''EOD Data''[HP Reperfusion Rev]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: HP Reperfusion Rev returns a number
+  type: is_numeric
+  measure: '''EOD Data''[HP Reperfusion Rev]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: HP System Rev is not blank
+  type: not_blank
+  measure: '''EOD Data''[HP System Rev]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: HP System Rev returns a number
+  type: is_numeric
+  measure: '''EOD Data''[HP System Rev]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Monthly Reorder Rate is not blank
+  type: not_blank
+  measure: '''EOD Data''[Monthly Reorder Rate]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Months Post Launch is not blank
+  type: not_blank
+  measure: '''EOD Data''[Months Post Launch]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Months Post Launch returns a number
+  type: is_numeric
+  measure: '''EOD Data''[Months Post Launch]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: National Monthly Reorder Rate is not blank
+  type: not_blank
+  measure: '''EOD Data''[National Monthly Reorder Rate]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: National Months Post Launch is not blank
+  type: not_blank
+  measure: '''EOD Data''[National Months Post Launch]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: National Months Post Launch returns a number
+  type: is_numeric
+  measure: '''EOD Data''[National Months Post Launch]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: National Revenue Generating Months is not blank
+  type: not_blank
+  measure: '''EOD Data''[National Revenue Generating Months]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: National Revenue Generating Months returns a number
+  type: is_numeric
+  measure: '''EOD Data''[National Revenue Generating Months]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: QoQ Declining Accounts is not blank
+  type: not_blank
+  measure: '''EOD Data''[QoQ Declining Accounts]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: QoQ Declining Accounts returns a number
+  type: is_numeric
+  measure: '''EOD Data''[QoQ Declining Accounts]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Qtr Daily Sales - Qtr Daily Goal is not blank
+  type: not_blank
+  measure: '''EOD Data''[Qtr Daily Sales - Qtr Daily Goal]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Quarterly Reorder Rate is not blank
+  type: not_blank
+  measure: '''EOD Data''[Quarterly Reorder Rate]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Quarters Post Launch is not blank
+  type: not_blank
+  measure: '''EOD Data''[Quarters Post Launch]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Quarters Post Launch returns a number
+  type: is_numeric
+  measure: '''EOD Data''[Quarters Post Launch]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Remaining Quota ATM is not blank
+  type: not_blank
+  measure: '''EOD Data''[Remaining Quota ATM]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Revenue 0 is not blank
+  type: not_blank
+  measure: '''EOD Data''[Revenue 0]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Revenue 0 returns a number
+  type: is_numeric
+  measure: '''EOD Data''[Revenue 0]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Revenue Generating Months is not blank
+  type: not_blank
+  measure: '''EOD Data''[Revenue Generating Months]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Revenue Generating Months returns a number
+  type: is_numeric
+  measure: '''EOD Data''[Revenue Generating Months]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Revenue Generating Quarters is not blank
+  type: not_blank
+  measure: '''EOD Data''[Revenue Generating Quarters]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Revenue Generating Quarters returns a number
+  type: is_numeric
+  measure: '''EOD Data''[Revenue Generating Quarters]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Revenue Qtr Pace Measrue Acuity 2 is not blank
+  type: not_blank
+  measure: '''EOD Data''[Revenue Qtr Pace Measrue Acuity 2]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Revenue Qtr Pace Measure is not blank
+  type: not_blank
+  measure: '''EOD Data''[Revenue Qtr Pace Measure]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Revenue Qtr Pace Measure Acuity is not blank
+  type: not_blank
+  measure: '''EOD Data''[Revenue Qtr Pace Measure Acuity]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Revenue Qtr Pace Measure Acuity returns a number
+  type: is_numeric
+  measure: '''EOD Data''[Revenue Qtr Pace Measure Acuity]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Revenue Trend per Account per Quarter is not blank
+  type: not_blank
+  measure: '''EOD Data''[Revenue Trend per Account per Quarter]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Revenue Trend per Account per Quarter returns a number
+  type: is_numeric
+  measure: '''EOD Data''[Revenue Trend per Account per Quarter]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: RevenueWithPctFooter is not blank
+  type: not_blank
+  measure: '''EOD Data''[RevenueWithPctFooter]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: RevenueWithPctFooter returns a number
+  type: is_numeric
+  measure: '''EOD Data''[RevenueWithPctFooter]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Rolling Qtr -1 Days between Orders is not blank
+  type: not_blank
+  measure: '''EOD Data''[Rolling Qtr -1 Days between Orders]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Rollup Monthly Reorder Rate is not blank
+  type: not_blank
+  measure: '''EOD Data''[Rollup Monthly Reorder Rate]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Rollup Months Post Launch is not blank
+  type: not_blank
+  measure: '''EOD Data''[Rollup Months Post Launch]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Rollup Months Post Launch returns a number
+  type: is_numeric
+  measure: '''EOD Data''[Rollup Months Post Launch]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Rollup Quarterly Reorder Rate is not blank
+  type: not_blank
+  measure: '''EOD Data''[Rollup Quarterly Reorder Rate]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Rollup Quarters Post Launch is not blank
+  type: not_blank
+  measure: '''EOD Data''[Rollup Quarters Post Launch]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Rollup Quarters Post Launch returns a number
+  type: is_numeric
+  measure: '''EOD Data''[Rollup Quarters Post Launch]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Rollup Revenue Generating Months is not blank
+  type: not_blank
+  measure: '''EOD Data''[Rollup Revenue Generating Months]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Rollup Revenue Generating Months returns a number
+  type: is_numeric
+  measure: '''EOD Data''[Rollup Revenue Generating Months]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Rollup Revenue Generating Quarters is not blank
+  type: not_blank
+  measure: '''EOD Data''[Rollup Revenue Generating Quarters]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Rollup Revenue Generating Quarters returns a number
+  type: is_numeric
+  measure: '''EOD Data''[Rollup Revenue Generating Quarters]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Sales_GrandAvg is not blank
+  type: not_blank
+  measure: '''EOD Data''[Sales_GrandAvg]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Sum of Revenue rolling average is not blank
+  type: not_blank
+  measure: '''EOD Data''[Sum of Revenue rolling average]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Sum of Revenue rolling average returns a number
+  type: is_numeric
+  measure: '''EOD Data''[Sum of Revenue rolling average]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: TotalMonthRevenue_CohortAvg is not blank
+  type: not_blank
+  measure: '''EOD Data''[TotalMonthRevenue_CohortAvg]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: TotalQuarterRevenue_CohortAvg is not blank
+  type: not_blank
+  measure: '''EOD Data''[TotalQuarterRevenue_CohortAvg]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data
+- name: Active Hospital (Diff %) is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Active Hospital (Diff %)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Active Hospital (Diff %) returns a number
+  type: is_numeric
+  measure: '''EOD Data (LV)''[Active Hospital (Diff %)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Active Hospital (Diff %) is a valid percentage
+  type: in_range
+  measure: '''EOD Data (LV)''[Active Hospital (Diff %)]'
+  min: 0
+  max: 10
+  tags:
+  - sanity
+  - auto-generated
+  - percentage
+  - eod-data-lv
+- name: Active Hospital (M Shape) is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Active Hospital (M Shape)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Active Hospitals (CM) is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Active Hospitals (CM)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Active Hospitals (CM) returns a number
+  type: is_numeric
+  measure: '''EOD Data (LV)''[Active Hospitals (CM)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Active Hospitals (PM) is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Active Hospitals (PM)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Active Hospitals (PM) returns a number
+  type: is_numeric
+  measure: '''EOD Data (LV)''[Active Hospitals (PM)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Avg Sales/Hospital is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Avg Sales/Hospital]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Avg Sales/Hospital returns a number
+  type: is_numeric
+  measure: '''EOD Data (LV)''[Avg Sales/Hospital]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Current Ordering Status is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Current Ordering Status]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Datefilter(YTD) is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Datefilter(YTD)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Datefilter(YTD) returns a number
+  type: is_numeric
+  measure: '''EOD Data (LV)''[Datefilter(YTD)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Days Since Last Order is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Days Since Last Order]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Days Since Last Order returns a number
+  type: is_numeric
+  measure: '''EOD Data (LV)''[Days Since Last Order]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Measure is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Measure]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Measure 2 is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Measure 2]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Net Revenue (CM diff %) is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Net Revenue (CM diff %)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Net Revenue (CM diff %) returns a number
+  type: is_numeric
+  measure: '''EOD Data (LV)''[Net Revenue (CM diff %)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Net Revenue (CM diff %) is a valid percentage
+  type: in_range
+  measure: '''EOD Data (LV)''[Net Revenue (CM diff %)]'
+  min: 0
+  max: 10
+  tags:
+  - sanity
+  - auto-generated
+  - percentage
+  - eod-data-lv
+- name: Net Revenue (CM) is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Net Revenue (CM)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Net Revenue (CM) returns a number
+  type: is_numeric
+  measure: '''EOD Data (LV)''[Net Revenue (CM)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Net Revenue (M Shape) is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Net Revenue (M Shape)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Net Revenue (PM) is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Net Revenue (PM)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Net Revenue (PYTD) is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Net Revenue (PYTD)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Net Revenue (YTD Shape) is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Net Revenue (YTD Shape)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Net Revenue (YTD diff %) is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Net Revenue (YTD diff %)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Net Revenue (YTD diff %) returns a number
+  type: is_numeric
+  measure: '''EOD Data (LV)''[Net Revenue (YTD diff %)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Net Revenue (YTD diff %) is a valid percentage
+  type: in_range
+  measure: '''EOD Data (LV)''[Net Revenue (YTD diff %)]'
+  min: 0
+  max: 10
+  tags:
+  - sanity
+  - auto-generated
+  - percentage
+  - eod-data-lv
+- name: Net Revenue (YTD) is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Net Revenue (YTD)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Net Revenue (YTD) returns a number
+  type: is_numeric
+  measure: '''EOD Data (LV)''[Net Revenue (YTD)]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: PD1% - 1 is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[PD1% - 1]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: PD2% - 1 is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[PD2% - 1]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: PD3% - 1 is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[PD3% - 1]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: PD4% - 1 is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[PD4% - 1]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: PD5% - 1 is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[PD5% - 1]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Qtr - Qtr Ordering Behavior is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Qtr - Qtr Ordering Behavior]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Current Ordering Status is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[RS_Current Ordering Status]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Current Qtr End is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[RS_Current Qtr End]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Current Qtr Start is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[RS_Current Qtr Start]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Days Since Last Order is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[RS_Days Since Last Order]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Days Since Last Order returns a number
+  type: is_numeric
+  measure: '''EOD Data (LV)''[RS_Days Since Last Order]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Elapsed Workdays is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[RS_Elapsed Workdays]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Qtr - Qtr Ordering Behavior is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[RS_Qtr - Qtr Ordering Behavior]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Qtr Workdays is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[RS_Qtr Workdays]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Reporting Through is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[RS_Reporting Through]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Rolling Half Days between Orders is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[RS_Rolling Half Days between Orders]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Rolling Qtr -1 Rev is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[RS_Rolling Qtr -1 Rev]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Rolling Qtr -1 Rev returns a number
+  type: is_numeric
+  measure: '''EOD Data (LV)''[RS_Rolling Qtr -1 Rev]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Rolling Qtr -1 Start is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[RS_Rolling Qtr -1 Start]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Rolling Qtr Day Variance is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[RS_Rolling Qtr Day Variance]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Rolling Qtr Days between Orders is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[RS_Rolling Qtr Days between Orders]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Rolling Qtr Rev is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[RS_Rolling Qtr Rev]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Rolling Qtr Rev returns a number
+  type: is_numeric
+  measure: '''EOD Data (LV)''[RS_Rolling Qtr Rev]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Rolling Qtr Start is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[RS_Rolling Qtr Start]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Rolling Qtr Variance is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[RS_Rolling Qtr Variance]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: RS_Rolling Qtr Variance returns a number
+  type: is_numeric
+  measure: '''EOD Data (LV)''[RS_Rolling Qtr Variance]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Rolling Half Days between Orders is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Rolling Half Days between Orders]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Rolling Qtr -1 Rev Measure is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Rolling Qtr -1 Rev Measure]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Rolling Qtr Day Variance is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Rolling Qtr Day Variance]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Rolling Qtr Days between Orders is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Rolling Qtr Days between Orders]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Rolling Qtr Rev Measure is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Rolling Qtr Rev Measure]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Rolling Qtr Variance is not blank
+  type: not_blank
+  measure: '''EOD Data (LV)''[Rolling Qtr Variance]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Rolling Qtr Variance returns a number
+  type: is_numeric
+  measure: '''EOD Data (LV)''[Rolling Qtr Variance]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-lv
+- name: Prior Qtr ASP is not blank
+  type: not_blank
+  measure: '''EOD Data NO RLS''[Prior Qtr ASP]'
+  tags:
+  - sanity
+  - auto-generated
+  - eod-data-no-rls
+- name: Account Designation Less Converted is not blank
+  type: not_blank
+  measure: '''GeneralAccountList''[Account Designation Less Converted]'
+  tags:
+  - sanity
+  - auto-generated
+  - generalaccountlist
+- name: Account Designation Less Converted returns a number
+  type: is_numeric
+  measure: '''GeneralAccountList''[Account Designation Less Converted]'
+  tags:
+  - sanity
+  - auto-generated
+  - generalaccountlist
+- name: Launched Sites is not blank
+  type: not_blank
+  measure: '''GeneralAccountList''[Launched Sites]'
+  tags:
+  - sanity
+  - auto-generated
+  - generalaccountlist
+- name: Launched Sites returns a number
+  type: is_numeric
+  measure: '''GeneralAccountList''[Launched Sites]'
+  tags:
+  - sanity
+  - auto-generated
+  - generalaccountlist
+- name: New Hospitals 2 is not blank
+  type: not_blank
+  measure: '''GeneralAccountList''[New Hospitals 2]'
+  tags:
+  - sanity
+  - auto-generated
+  - generalaccountlist
+- name: New Hospitals 2 returns a number
+  type: is_numeric
+  measure: '''GeneralAccountList''[New Hospitals 2]'
+  tags:
+  - sanity
+  - auto-generated
+  - generalaccountlist
+- name: Hospital Count by PD is not blank
+  type: not_blank
+  measure: '''GeneralAccountList (LV)''[Hospital Count by PD]'
+  tags:
+  - sanity
+  - auto-generated
+  - generalaccountlist-lv
+- name: Hospital Count by PD returns a number
+  type: is_numeric
+  measure: '''GeneralAccountList (LV)''[Hospital Count by PD]'
+  tags:
+  - sanity
+  - auto-generated
+  - generalaccountlist-lv
+- name: Inactive Hospitals is not blank
+  type: not_blank
+  measure: '''GeneralAccountList (LV)''[Inactive Hospitals]'
+  tags:
+  - sanity
+  - auto-generated
+  - generalaccountlist-lv
+- name: Inactive Hospitals returns a number
+  type: is_numeric
+  measure: '''GeneralAccountList (LV)''[Inactive Hospitals]'
+  tags:
+  - sanity
+  - auto-generated
+  - generalaccountlist-lv
+- name: Prior Qtr Hospital Count by PD is not blank
+  type: not_blank
+  measure: '''GeneralAccountList (LV)''[Prior Qtr Hospital Count by PD]'
+  tags:
+  - sanity
+  - auto-generated
+  - generalaccountlist-lv
+- name: Prior Qtr Hospital Count by PD returns a number
+  type: is_numeric
+  measure: '''GeneralAccountList (LV)''[Prior Qtr Hospital Count by PD]'
+  tags:
+  - sanity
+  - auto-generated
+  - generalaccountlist-lv
+- name: Eligibility is not blank
+  type: not_blank
+  measure: '''PClub''[Eligibility]'
+  tags:
+  - sanity
+  - auto-generated
+  - pclub
+- name: PTQ is not blank
+  type: not_blank
+  measure: '''PTQ EOD Data''[PTQ]'
+  tags:
+  - sanity
+  - auto-generated
+  - ptq-eod-data
+- name: PTQ Annualized Sales is not blank
+  type: not_blank
+  measure: '''PTQ EOD Data''[PTQ Annualized Sales]'
+  tags:
+  - sanity
+  - auto-generated
+  - ptq-eod-data
+- name: PTQ PTQ is not blank
+  type: not_blank
+  measure: '''PTQ Revenue Quota''[PTQ PTQ]'
+  tags:
+  - sanity
+  - auto-generated
+  - ptq-revenue-quota
+- name: BC2.0 ASP Variance to Quota is not blank
+  type: not_blank
+  measure: '''Product Family''[BC2.0 ASP Variance to Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - product-family
+- name: HP70 Repurfusion ASP Variance to Quota is not blank
+  type: not_blank
+  measure: '''Product Family''[HP70 Repurfusion ASP Variance to Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - product-family
+- name: HP88 Repurfusion ASP Variance to Quota is not blank
+  type: not_blank
+  measure: '''Product Family''[HP88 Repurfusion ASP Variance to Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - product-family
+- name: Quota ATM is not blank
+  type: not_blank
+  measure: '''Quota ATM''[Quota ATM]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-atm
+- name: Quota ATM returns a number
+  type: is_numeric
+  measure: '''Quota ATM''[Quota ATM]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-atm
+- name: New Site Count is not blank
+  type: not_blank
+  measure: '''Quota New Site''[New Site Count]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-new-site
+- name: New Site Count returns a number
+  type: is_numeric
+  measure: '''Quota New Site''[New Site Count]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-new-site
+- name: New Site Delta is not blank
+  type: not_blank
+  measure: '''Quota New Site''[New Site Delta]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-new-site
+- name: New Site Delta returns a number
+  type: is_numeric
+  measure: '''Quota New Site''[New Site Delta]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-new-site
+- name: New Site Goals is not blank
+  type: not_blank
+  measure: '''Quota New Site''[New Site Goals]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-new-site
+- name: New Site Goals returns a number
+  type: is_numeric
+  measure: '''Quota New Site''[New Site Goals]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-new-site
+- name: Product % to Quota is not blank
+  type: not_blank
+  measure: '''Quota Product Revenue''[Product % to Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-product-revenue
+- name: Region % of Quota is not blank
+  type: not_blank
+  measure: '''Quota Rev by Region''[Region % of Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-rev-by-region
+- name: Region Actual v Quota is not blank
+  type: not_blank
+  measure: '''Quota Rev by Region''[Region Actual v Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-rev-by-region
+- name: Region Actual v Quota returns a number
+  type: is_numeric
+  measure: '''Quota Rev by Region''[Region Actual v Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-rev-by-region
+- name: Region Pace % to Quota is not blank
+  type: not_blank
+  measure: '''Quota Rev by Region''[Region Pace % to Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-rev-by-region
+- name: Region Pace vs Quota is not blank
+  type: not_blank
+  measure: '''Quota Rev by Region''[Region Pace vs Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-rev-by-region
+- name: Daily Quota is not blank
+  type: not_blank
+  measure: '''Quota Revenue''[Daily Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-revenue
+- name: Daily Quota returns a number
+  type: is_numeric
+  measure: '''Quota Revenue''[Daily Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-revenue
+- name: Pace vs Quota is not blank
+  type: not_blank
+  measure: '''Quota Revenue''[Pace vs Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-revenue
+- name: Qtr Daily Quota Measure is not blank
+  type: not_blank
+  measure: '''Quota Revenue''[Qtr Daily Quota Measure]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-revenue
+- name: Qtr Daily Quota Measure returns a number
+  type: is_numeric
+  measure: '''Quota Revenue''[Qtr Daily Quota Measure]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-revenue
+- name: Qtr Daily Sales to Achieve Goal is not blank
+  type: not_blank
+  measure: '''Quota Revenue''[Qtr Daily Sales to Achieve Goal]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-revenue
+- name: Actual vs Quota is not blank
+  type: not_blank
+  measure: '''Quota Revenue by Rep (LV)''[Actual vs Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-revenue-by-rep-lv
+- name: Actual vs Quota returns a number
+  type: is_numeric
+  measure: '''Quota Revenue by Rep (LV)''[Actual vs Quota]'
+  tags:
+  - sanity
+  - auto-generated
+  - quota-revenue-by-rep-lv
+- name: New Sites is not blank
+  type: not_blank
+  measure: '''TM Region Sites''[New Sites]'
+  tags:
+  - sanity
+  - auto-generated
+  - tm-region-sites
+- name: New Sites returns a number
+  type: is_numeric
+  measure: '''TM Region Sites''[New Sites]'
+  tags:
+  - sanity
+  - auto-generated
+  - tm-region-sites
+- name: New Hospitals is not blank
+  type: not_blank
+  measure: '''Total and New Accounts''[New Hospitals]'
+  tags:
+  - sanity
+  - auto-generated
+  - total-and-new-accounts
+- name: New Hospitals returns a number
+  type: is_numeric
+  measure: '''Total and New Accounts''[New Hospitals]'
+  tags:
+  - sanity
+  - auto-generated
+  - total-and-new-accounts
+- name: Total Hospitals is not blank
+  type: not_blank
+  measure: '''Total and New Accounts''[Total Hospitals]'
+  tags:
+  - sanity
+  - auto-generated
+  - total-and-new-accounts
+- name: Total Hospitals returns a number
+  type: is_numeric
+  measure: '''Total and New Accounts''[Total Hospitals]'
+  tags:
+  - sanity
+  - auto-generated
+  - total-and-new-accounts

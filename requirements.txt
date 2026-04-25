@@ -1,0 +1,9 @@
+# Power BI DAX testing dependencies
+# Install: pip install -r requirements.txt
+# Or use uvx: uvx --python 3.12 --with pyadomd --with pyyaml --with pandas python pbi_query.py
+#
+# IMPORTANT: Requires Python 3.12 (pythonnet does not support 3.14+)
+
+pyadomd>=0.2.0
+pyyaml>=6.0
+pandas>=2.0

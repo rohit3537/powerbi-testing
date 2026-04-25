@@ -1,0 +1,87 @@
+# Business Requirements for DAX Measures
+# Used by: python -m dax_test.runner --review <model_path> --requirements tests/requirements.yaml
+#
+# Each measure maps to its business requirement. The review engine compares
+# the DAX expression against this description to flag potential misalignment.
+
+measures:
+  "RS_Reporting Through":
+    description: >
+      The maximum (latest) date in the EOD Data table, ignoring all filter context.
+      This is the anchor date for all rolling window calculations.
+    owner: "Data Team"
+
+  "RS_Current Qtr Start":
+    description: >
+      First day of the calendar quarter containing the reporting-through date.
+      For example, if reporting through is Feb 15, this returns Jan 1.
+    owner: "Data Team"
+
+  "RS_Current Qtr End":
+    description: >
+      Last day of the calendar quarter containing the reporting-through date.
+      For example, if reporting through is Feb 15, this returns Mar 31.
+    owner: "Data Team"
+
+  "RS_Qtr Workdays":
+    description: >
+      Count of working days (Monday-Friday, excluding holidays) in the current
+      calendar quarter. Uses the Holidays table for holiday exclusions.
+    owner: "Data Team"
+
+  "RS_Elapsed Workdays":
+    description: >
+      Count of working days from the current quarter start through the
+      reporting-through date. Represents how far into the quarter we are.
+    owner: "Data Team"
+
+  "RS_Rolling Qtr Start":
+    description: >
+      The start date of the rolling quarter window. Calculated by walking
+      backward X workdays from the reporting-through date, where X equals
+      the number of elapsed workdays in the current calendar quarter.
+    owner: "Data Team"
+
+  "RS_Rolling Qtr Rev":
+    description: >
+      Sum of net revenue for all dates from the rolling quarter start
+      through the reporting-through date. This provides a rolling window
+      of revenue that dynamically adjusts with the calendar.
+    owner: "Data Team"
+
+  "RS_Rolling Qtr -1 Rev":
+    description: >
+      Sum of net revenue for the prior rolling quarter window. The window
+      is from 2X workdays back to X workdays back (exclusive of rolling
+      quarter start). Used for quarter-over-quarter comparison.
+    owner: "Data Team"
+
+  "RS_Rolling Qtr Days between Orders":
+    description: >
+      Average number of working days between distinct order dates within
+      the rolling quarter window. Calculated as NETWORKDAYS(start, end)
+      divided by the count of distinct order dates in that period. Returns
+      BLANK if there are no orders.
+    owner: "Data Team"
+
+  "RS_Rolling Half Days between Orders":
+    description: >
+      Same as RS_Rolling Qtr Days between Orders but over a rolling half-year
+      (2 quarters) window. Used to compare recent ordering frequency against
+      longer-term patterns.
+    owner: "Data Team"
+
+  "RS_Qtr - Qtr Ordering Behavior":
+    description: >
+      Classifies each hospital's ordering behavior by comparing rolling quarter
+      days between orders vs rolling half days between orders. Categories:
+      "Ordering More Frequently" if qtr < half (shorter gap = more frequent),
+      "Ordering Less Frequently" if qtr > half,
+      "No Orders for 3+ Months" if no orders in the rolling quarter.
+    owner: "Data Team"
+
+  "RS_Behavior Hospital Count":
+    description: >
+      Count of distinct hospitals matching each ordering behavior category.
+      Used to populate the ordering behavior summary donut chart.
+    owner: "Data Team"

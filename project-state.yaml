@@ -1,0 +1,34 @@
+# Project State — Power BI Testing
+# Updated at the end of each working session
+
+last_session: "2026-04-08"
+current_phase: "experimental"
+
+active_tasks:
+  - "BASE4/Mike Ulta-LV: verify slicers populate after .pbip refresh (lookup tables approach)"
+  - "MESACO/Neetu workbook: re-publish and confirm PBI Service refresh succeeds"
+
+completed_recently:
+  - "Added 3 filter slicers (Retail Item Rank, FeatureCode, SeasonCode) to 6 report pages via .pbip editing"
+  - "Created 3 calculated lookup tables + 6 relationships in semantic model for cross-table slicer filtering"
+  - "Fixed 7 DAX measures with PLACEHOLDER error (boolean as CALCULATE filter) — MESACO/Neetu"
+
+decisions:
+  - "For cross-table slicers: create dedicated calculated lookup tables with DISTINCT(UNION(...)) from all fact tables, not add columns to existing dimension tables"
+  - ".pbip format enables programmatic report layout editing (visual.json files); .pbix does not"
+  - "TOM via pythonnet is the right approach for modifying PBI measures programmatically"
+
+next_steps:
+  - "Open Ulta-LV .pbip, refresh, verify slicers work on all pages"
+  - "Adjust slicer positions if needed per page"
+  - "Consider hiding Retail Item Rank, FeatureCode, SeasonCode on Sales_Inv and DC Inventory (since slicers now use lookup tables)"
+  - "Confirm MESACO PBI Service refresh works after re-publish"
+  - "Consider adding 'PBI Service compatibility' check to review_checks.py static analysis"
+
+blockers: []
+
+context: >
+  DAX testing and validation framework. Experimental status, medium maturity.
+  YAML-based test suites, TMDL parsing. Requires Python 3.12 + PBI Desktop.
+  Workbooks: Ztech, Medstar Acute, Medstar Retail, PSJH, Neetu (MESACO), Ulta-LV (BASE4/Mike).
+  Capable of programmatic measure editing via TOM (pythonnet) and report layout editing via .pbip JSON.
