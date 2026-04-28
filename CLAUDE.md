@@ -2,6 +2,12 @@
 
 > **Part of AI OS.** Read `../../CLAUDE.md` for global rules. Read `../../shared/knowledge/` for cross-project learnings.
 >
+> **⚠ Verify latest state before answering.** Memory, this CLAUDE.md, project-state.yaml,
+> and session logs are snapshots in time and go stale. Before recommending any file,
+> function, config, or status: read the actual file, grep for the symbol, or run
+> `git log -10` to confirm it still exists / is still true. If recalled info conflicts
+> with live state, trust live state and update the stale source.
+>
 > **Shared resources:** `../../shared/knowledge/` (cross-project learnings)
 >
 > **Global rules (inherited):** CLI first / API last. Always test. Minimize tokens. Build modular. Commit frequently. Self-anneal.
